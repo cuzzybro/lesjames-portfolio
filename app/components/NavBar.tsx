@@ -47,14 +47,14 @@ const NavBar = ({ active = 'about'}: { active?: Active }) => {
           <div>
             <a
               className={cn("btn btn-ghost hover:animate-pulse", `${ active=='about' ? 'text-lime-200': ''}`)} 
-              href="/"
+              href="./"
               >About
               <span className={`block h-1 bg-lime-200 rounded-full ${active=='about' ? 'max-w-full' : 'max-w-0' }`}></span>
             </a>
           </div>
-          <div><a className={cn("btn btn-ghost hover:animate-pulse", `${ active=='skills' ? 'text-lime-200': ''}`)} href="/skills">Skills</a></div>
-          <div><a className={cn("btn btn-ghost hover:animate-pulse", `${ active=='projects' ? 'text-lime-200': ''}`)} href="/projects">Projects</a></div>
-          <div><a className={cn("btn btn-ghost hover:animate-pulse", `${ active=='contact' ? 'text-lime-200': ''}`)} href="/contact">Contact</a></div>
+          <div><a className={cn("btn btn-ghost hover:animate-pulse", `${ active=='skills' ? 'text-lime-200': ''}`)} href="./skills">Skills</a></div>
+          <div><a className={cn("btn btn-ghost hover:animate-pulse", `${ active=='projects' ? 'text-lime-200': ''}`)} href="./projects">Projects</a></div>
+          <div><a className={cn("btn btn-ghost hover:animate-pulse", `${ active=='contact' ? 'text-lime-200': ''}`)} href="./contact">Contact</a></div>
 
       </div>
       <div className="flex-none">
