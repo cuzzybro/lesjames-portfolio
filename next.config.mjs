@@ -12,6 +12,7 @@ const nextConfig = {
         GOOGLE_URL: 'https://google.com',
         YOUTUBE_URL: 'https://youtube.com',
         MESSENGER_URL: 'https://messenger.com',
+        BASE_PATH: '/lesjames-portfolio'
     }
 };
 

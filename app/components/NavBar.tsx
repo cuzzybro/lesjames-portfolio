@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils/cn";
 import TypeWriter from "./TypeWriter";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faEllipsis } from "@fortawesome/free-solid-svg-icons";
-import { usePathname } from "next/navigation";
+import { SingletonRouter } from "next/router";
 
 type Active = 'about' | 'skills' | 'projects' | 'contact'
 type TypeWriterProps = {
@@ -13,10 +13,6 @@ type TypeWriterProps = {
   options?: {
     textColor: `text-[${string}]`;
   }
-}
-type ItemProperties = {
-  active: Active;
-  textColor?: `text-${string}`;
 }
 
 const NameTypeWriter = ({ name, active, options }: TypeWriterProps ) => {
@@ -33,7 +29,7 @@ const NameTypeWriter = ({ name, active, options }: TypeWriterProps ) => {
   )
 }
 
-const NavBar = ({ active = 'about'}: { active?: Active }) => {
+const NavBar = ({ active = 'about' }: { active?: Active }) => {
 
   return (
     <div className="navbar bg-base-100 flex grid-cols-3 ">
@@ -47,14 +43,14 @@ const NavBar = ({ active = 'about'}: { active?: Active }) => {
           <div>
             <a
               className={cn("btn btn-ghost hover:animate-pulse", `${ active=='about' ? 'text-lime-200': ''}`)} 
-              href="./"
+              href={`${process.env.BASE_PATH}`}
               >About
               <span className={`block h-1 bg-lime-200 rounded-full ${active=='about' ? 'max-w-full' : 'max-w-0' }`}></span>
             </a>
           </div>
-          <div><a className={cn("btn btn-ghost hover:animate-pulse", `${ active=='skills' ? 'text-lime-200': ''}`)} href="./skills">Skills</a></div>
-          <div><a className={cn("btn btn-ghost hover:animate-pulse", `${ active=='projects' ? 'text-lime-200': ''}`)} href="./projects">Projects</a></div>
-          <div><a className={cn("btn btn-ghost hover:animate-pulse", `${ active=='contact' ? 'text-lime-200': ''}`)} href="./contact">Contact</a></div>
+          <div><a className={cn("btn btn-ghost hover:animate-pulse", `${ active=='skills' ? 'text-lime-200': ''}`)} href={`${process.env.BASE_PATH}/skills`}>Skills</a></div>
+          <div><a className={cn("btn btn-ghost hover:animate-pulse", `${ active=='projects' ? 'text-lime-200': ''}`)} href={`${process.env.BASE_PATH}/projects`}>Projects</a></div>
+          <div><a className={cn("btn btn-ghost hover:animate-pulse", `${ active=='contact' ? 'text-lime-200': ''}`)} href={`${process.env.BASE_PATH}/contact`}>Contact</a></div>
 
       </div>
       <div className="flex-none">
