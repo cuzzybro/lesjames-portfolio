@@ -5,14 +5,17 @@ import Socials from '../components/Socials'
 const Projects = () => {
   return (
     <main className=" w-full h-full ">
-      <header className=" w-full ">
-        <NavBar active='projects'></NavBar>
-      </header>
-      <div className=' min-h-[600px] '>
-
-      </div>
-      <div>
-      </div>
+        <header className=" w-full inline-flex ">
+            <NavBar />
+        </header>
+        <div className=' w-full bg-slate-700 min-h-[600px] grid-cols-2 bg-opacity-20 '>
+        <div className=' w-full min-h-[600px] text-white inline-flex justify-center items-center bg-slate-700 bg-opacity-20'>
+            <h1 className=' text-center opacity-100'>PROJECTS</h1>
+        </div>
+        </div>
+        <div className=" p-10 ">
+            <Socials/>
+        </div>
     </main>
   )
 }

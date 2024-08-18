@@ -13,6 +13,9 @@ const nextConfig = {
         YOUTUBE_URL: 'https://youtube.com',
         MESSENGER_URL: 'https://messenger.com',
         BASE_PATH: '/lesjames-portfolio'
+    },
+    images: {
+        unoptimized: true
     }
 };
 

@@ -1,11 +1,12 @@
 import React from 'react'
 
-
 const DetailsSlider = () => {
 
 
     return (
-        <div>DetailsSlider</div>
+        <div>
+            DetailsSlider
+        </div>
     )
 }
 
