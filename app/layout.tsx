@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "dotenv/config";
 import Image from "next/image";
-import technology from "@/public/technology.jpg"
+import mac from "@/public/mac-background.jpg"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +24,7 @@ export default function RootLayout({
         className={`${inter.className} text-white` }
       >
         <div>
-          <Image src={technology} alt="" className=" bg-cover z-[-1] fixed opacity-30"/>
+          <Image src={mac} alt="" className=" bg-cover z-[-1] fixed opacity-30"/>
         </div>
         <div className="  flex min-h-screen flex-col items-center justify-between p-24 ">
           {children}
